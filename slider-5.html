@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="slider-5/main.css">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="styles/swiper.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="js/swiper.min.js">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <header>
+        <a href="index.html" class="svg"></a>
+        <nav>
+          <a class="nav-item" href="index.html">Slider-1</a>
+          <a class="nav-item" href="slider-2.html">Slider-2</a>
+          <a class="nav-item" href="slider-3.html">Slider-3</a>
+          <a class="nav-item" href="slider-4.html">Slider-4</a>
+          <a class="nav-item is-active">Slider-5</a>
+        </nav>
+      </header>
+    </div>
+
+
+    <!-- Swiper -->
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(images/Street/banse.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/behzad.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/samuel.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/japan.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/photo.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/ashlee.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/717-cdb.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/matthew.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/7abca.jpg)"></div>
+
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(images/Street/banse.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/behzad.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/samuel.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/japan.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/photo.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/ashlee.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/717-cdb.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/matthew.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(images/Street/7abca.jpg)"></div>
+
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop:true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+  </script>
+
+  </body>
+</html>
